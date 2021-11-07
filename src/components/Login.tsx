@@ -109,7 +109,7 @@ export default function Login() {
                     <Button sx={{textTransform: "none", m: "1em", borderRadius: "10%"}}>
                         <img src={GoogleLogo} alt="Google Logo"/>
                     </Button>
-                    <Button sx={{textTransform: "none", m: "1em"}}>2
+                    <Button sx={{textTransform: "none", m: "1em"}}>
                         <img src={FacebookLogo} alt="Facebook Logo"/>
                     </Button>
                     <Button sx={{textTransform: "none", m: "1em"}}>
