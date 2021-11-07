@@ -25,10 +25,13 @@ export default function Navbar() {
                     marginLeft: 20,
                     marginRight: 40
                 }}>
-                    <Typography variant="h6" color="inherit" component="div"
-                                style={{fontVariant: "small-caps", fontWeight: "bold", color: "white"}}>
-                        Sign Up
-                    </Typography>
+                    <Link to="/signup" style={{textDecoration: "none"}}>
+                        <Typography variant="h6" color="inherit" component="div"
+                                    style={{fontVariant: "small-caps", fontWeight: "bold", color: "white"}}>
+                            Sign Up
+                        </Typography>
+                    </Link>
+
                 </Button>
             </Toolbar>
         </AppBar>

@@ -31,3 +31,16 @@ export function useTextField(label: string, type = "text") {
         reset
     }
 }
+
+// TODO: Find out why its not working (low priority)
+// export function useCheckBox(defaultVal = false) {
+//     const [checked, setChecked] = useState(defaultVal)
+//
+//     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+//         setChecked(event.target.checked);
+//     };
+//     return [
+//         checked,
+//         handleChange
+//     ]
+// }

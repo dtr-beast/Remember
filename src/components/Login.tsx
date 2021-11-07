@@ -4,6 +4,7 @@ import GoogleLogo from "../assets/images/google.svg"
 import TwitterLogo from "../assets/images/twitter.svg"
 import FacebookLogo from "../assets/images/facebook.svg"
 import {useTextField} from "../hooks";
+import {Link} from "react-router-dom";
 //
 // interface SignInFormProps {
 //     submitUser: (user: User) => void
@@ -71,10 +72,13 @@ export default function Login() {
                     marginLeft: 20,
                     marginRight: 40
                 }}>
-                    <Typography variant="h6" color="inherit" component="div"
-                                style={{fontVariant: "small-caps", fontWeight: "bold", color: "white"}}>
-                        Sign Up
-                    </Typography>
+                    <Link to="/signup" style={{textDecoration: "none"}}>
+                        <Typography variant="h6" color="inherit" component="div"
+                                    style={{fontVariant: "small-caps", fontWeight: "bold", color: "white"}}>
+                            Sign Up
+                        </Typography>
+                    </Link>
+
                 </Button>
             </Toolbar>
         </AppBar>
@@ -84,6 +88,7 @@ export default function Login() {
                 <Typography variant="h1" sx={{fontSize: "3em"}}>
                     Sign In
                 </Typography>
+
                 <Typography variant="h3" component="div" sx={{fontSize: "1em", m: "1em"}}>
                     Use your email to sign in:
                 </Typography>
@@ -104,7 +109,7 @@ export default function Login() {
                     <Button sx={{textTransform: "none", m: "1em", borderRadius: "10%"}}>
                         <img src={GoogleLogo} alt="Google Logo"/>
                     </Button>
-                    <Button sx={{textTransform: "none", m: "1em"}}>
+                    <Button sx={{textTransform: "none", m: "1em"}}>2
                         <img src={FacebookLogo} alt="Facebook Logo"/>
                     </Button>
                     <Button sx={{textTransform: "none", m: "1em"}}>
