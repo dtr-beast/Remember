@@ -1,8 +1,8 @@
 import React, {FormEvent} from "react";
 import {AppBar, Box, Button, Toolbar, Typography, TextField} from "@mui/material";
-import GoogleLogo from "../assets/images/google.svg"
-import TwitterLogo from "../assets/images/twitter.svg"
-import FacebookLogo from "../assets/images/facebook.svg"
+import GoogleLogo from "../assets/logos/google.svg"
+import TwitterLogo from "../assets/logos/twitter.svg"
+import FacebookLogo from "../assets/logos/facebook.svg"
 import {useTextField} from "../hooks";
 import {Link} from "react-router-dom";
 //

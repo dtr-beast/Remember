@@ -2,9 +2,10 @@ import {Button, Typography, Toolbar, AppBar, Box} from "@mui/material";
 import {Link} from "react-router-dom"
 import React from "react";
 
-export default function Navbar() {
+export default function HomeNavbar() {
+
     return <Box sx={{flexGrow: 1}}>
-        <AppBar position="static" style={{backgroundColor: "#ADE8F4"}} elevation={0}>
+        <AppBar position="static" elevation={0} color="transparent">
             <Toolbar>
                 <Typography variant="h6" component="div"
                             sx={{flexGrow: 1, color: "#00f", fontFamily: "Lemonada", fontSize: "30px"}}>
