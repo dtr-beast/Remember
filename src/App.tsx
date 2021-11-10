@@ -1,7 +1,7 @@
 import React from 'react';
 import {Routes, Route} from "react-router-dom";
-import Login from "./components/Login";
 import Register from "./components/Register";
+import Login from "./components/Login";
 import HomePage from "./components/HomePage";
 
 export default function App() {

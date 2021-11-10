@@ -11,12 +11,12 @@ import {
     Checkbox
 } from "@mui/material";
 
-import GoogleLogo from "../assets/logos/google.svg"
-import TwitterLogo from "../assets/logos/twitter.svg"
-import FacebookLogo from "../assets/logos/facebook.svg"
-import {useTextField} from "../hooks";
-import {Link} from "react-router-dom";
-import register from "../services/registerService";
+import GoogleLogo from "../../assets/logos/google.svg"
+import TwitterLogo from "../../assets/logos/twitter.svg"
+import FacebookLogo from "../../assets/logos/facebook.svg"
+import {useTextField} from "../../hooks";
+import register from "../../services/registerService";
+import Navbar from "./Navbar";
 
 interface SignInFormProps {
     submitUser: (user: User) => void
@@ -79,29 +79,29 @@ export default function Register() {
     }
 
     return <>
-        <AppBar position="static" style={{backgroundColor: "#ADE8F4"}} elevation={0}>
-            <Toolbar>
-                <Typography variant="h6"
-                            sx={{flexGrow: 1, color: "#00f", fontFamily: "Lemonada", fontSize: "2em"}}>
-                    Remember
-                </Typography>
-                <Button style={{
-                    textTransform: "none",
-                    backgroundColor: "#0077B6",
-                    borderRadius: 10,
-                    marginLeft: 20,
-                    marginRight: 40
-                }}>
-                    <Link to="/login" style={{textDecoration: "none"}}>
-                        <Typography variant="h6" color="inherit" component="div"
-                                    style={{fontVariant: "small-caps", fontWeight: "bold", color: "white"}}>
-                            Sign In
-                        </Typography>
-                    </Link>
-                </Button>
-            </Toolbar>
-        </AppBar>
-
+        {/*<AppBar position="static" style={{backgroundColor: "#ADE8F4"}} elevation={0}>*/}
+        {/*    <Toolbar>*/}
+        {/*        <Typography variant="h6"*/}
+        {/*                    sx={{flexGrow: 1, color: "#00f", fontFamily: "Lemonada", fontSize: "2em"}}>*/}
+        {/*            Remember*/}
+        {/*        </Typography>*/}
+        {/*        <Button style={{*/}
+        {/*            textTransform: "none",*/}
+        {/*            backgroundColor: "#0077B6",*/}
+        {/*            borderRadius: 10,*/}
+        {/*            marginLeft: 20,*/}
+        {/*            marginRight: 40*/}
+        {/*        }}>*/}
+        {/*            <Link to="/login" style={{textDecoration: "none"}}>*/}
+        {/*                <Typography variant="h6" color="inherit" component="div"*/}
+        {/*                            style={{fontVariant: "small-caps", fontWeight: "bold", color: "white"}}>*/}
+        {/*                    Sign In*/}
+        {/*                </Typography>*/}
+        {/*            </Link>*/}
+        {/*        </Button>*/}
+        {/*    </Toolbar>*/}
+        {/*</AppBar>*/}
+        <Navbar/>
         <Box sx={{p: "3em", display: "flex"}}>
             <Box sx={{m: "auto"}}>
                 <Typography variant="h1" sx={{fontSize: "3em"}}>

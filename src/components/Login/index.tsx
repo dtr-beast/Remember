@@ -1,15 +1,16 @@
 import React, {FormEvent} from "react";
 import {AppBar, Box, Button, Toolbar, Typography, TextField} from "@mui/material";
-import GoogleLogo from "../assets/logos/google.svg"
-import TwitterLogo from "../assets/logos/twitter.svg"
-import FacebookLogo from "../assets/logos/facebook.svg"
-import {useTextField} from "../hooks";
-import {Link} from "react-router-dom";
-import loginService from "../services/loginService";
+import GoogleLogo from "../../assets/logos/google.svg"
+import TwitterLogo from "../../assets/logos/twitter.svg"
+import FacebookLogo from "../../assets/logos/facebook.svg"
+import {useTextField} from "../../hooks";
+import loginService from "../../services/loginService";
+import Navbar from "./Navbar";
 
 interface SignInFormProps {
     submitUser: (user: User) => void
 }
+
 interface User {
     name: string
 }
@@ -22,6 +23,7 @@ async function asyncRequest(promise: Promise<any>) {
         return [null, error]
     }
 }
+
 //{submitUser}: SignInFormProps
 export default function Login() {
 
@@ -63,31 +65,32 @@ export default function Login() {
     }
 
     return <>
-        <AppBar position="static" style={{backgroundColor: "#ADE8F4"}} elevation={0}>
-            <Toolbar>
-                <Typography variant="h6"
-                            sx={{flexGrow: 1, color: "#00f", fontFamily: "Lemonada", fontSize: "2em"}}>
-                    Remember
-                </Typography>
-                <Button style={{
-                    textTransform: "none",
-                    backgroundColor: "#0077B6",
-                    borderRadius: 10,
-                    marginLeft: 20,
-                    marginRight: 40
-                }}>
-                    <Link to="/signup" style={{textDecoration: "none"}}>
-                        <Typography variant="h6" color="inherit" component="div"
-                                    style={{fontVariant: "small-caps", fontWeight: "bold", color: "white"}}>
-                            Sign Up
-                        </Typography>
-                    </Link>
+        {/*<AppBar position="static" style={{backgroundColor: "#ADE8F4"}} elevation={0}>*/}
+        {/*    <Toolbar>*/}
+        {/*        <Typography variant="h6"*/}
+        {/*                    sx={{flexGrow: 1, color: "#00f", fontFamily: "Lemonada", fontSize: "2em"}}>*/}
+        {/*            Remember*/}
+        {/*        </Typography>*/}
+        {/*        <Button style={{*/}
+        {/*            textTransform: "none",*/}
+        {/*            backgroundColor: "#0077B6",*/}
+        {/*            borderRadius: 10,*/}
+        {/*            marginLeft: 20,*/}
+        {/*            marginRight: 40*/}
+        {/*        }}>*/}
+        {/*            <Link to="/signup" style={{textDecoration: "none"}}>*/}
+        {/*                <Typography variant="h6" color="inherit" component="div"*/}
+        {/*                            style={{fontVariant: "small-caps", fontWeight: "bold", color: "white"}}>*/}
+        {/*                    Sign Up*/}
+        {/*                </Typography>*/}
+        {/*            </Link>*/}
 
-                </Button>
-            </Toolbar>
-        </AppBar>
+        {/*        </Button>*/}
+        {/*    </Toolbar>*/}
+        {/*</AppBar>*/}
 
-        <Box sx={{p: "3em", display: "flex"}}>
+        <Navbar/>
+        <Box sx={{p: "3em", display: "flex", pt: "5em"}}>
             <Box sx={{m: "auto"}}>
                 <Typography variant="h1" sx={{fontSize: "3em"}}>
                     Sign In
