@@ -5,10 +5,14 @@ import TwitterLogo from "../assets/logos/twitter.svg"
 import FacebookLogo from "../assets/logos/facebook.svg"
 import {useTextField} from "../hooks";
 import {Link} from "react-router-dom";
-//
-// interface SignInFormProps {
-//     submitUser: (user: User) => void
-// }
+import loginService from "../services/loginService";
+
+interface SignInFormProps {
+    submitUser: (user: User) => void
+}
+interface User {
+    name: string
+}
 
 async function asyncRequest(promise: Promise<any>) {
     try {
@@ -18,7 +22,7 @@ async function asyncRequest(promise: Promise<any>) {
         return [null, error]
     }
 }
-
+//{submitUser}: SignInFormProps
 export default function Login() {
 
     const username = useTextField('Username')
@@ -37,24 +41,24 @@ export default function Login() {
                 username.setHelperText("Enter a username")
                 return;
             }
-            //
-            // const [user, error] = await asyncRequest(loginService.login({
-            //     username: username.value,
-            //     password: password.value
-            // }))
 
-            // if (error) {
-            //     if (error.message === 'invalidUsername') {
-            //         username.setError(true)
-            //         username.setHelperText("Couldn't find your account")
-            //     } else if (error.message === 'invalidPassword') {
-            //         console.log("Wrong Pass")
-            //         password.setError(true)
-            //         password.setHelperText("Wrong Password")
-            //     }
-            // } else {
-            //     submitUser(user)
-            // }
+            const [user, error] = await asyncRequest(loginService.login({
+                username: username.value,
+                password: password.value
+            }))
+
+            if (error) {
+                if (error.message === 'invalidUsername') {
+                    username.setError(true)
+                    username.setHelperText("Couldn't find your account")
+                } else if (error.message === 'invalidPassword') {
+                    console.log("Wrong Pass")
+                    password.setError(true)
+                    password.setHelperText("Wrong Password")
+                }
+            } else {
+                // submitUser(user)
+            }
         };
     }
 

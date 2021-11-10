@@ -1,5 +1,3 @@
-
-
 @font-face {
     font-family: 'Google Sans';
     font-style: normal;
@@ -248,11 +246,12 @@ a.blanter-order-btn:hover {
 
 /* Change Color Code */
 
-@media screen and (max-width:580px) {
+@media screen and (max-width: 580px) {
     .pricing-blanter-column,
     .blanter-2-column .pricing-blanter-column {
         width: auto
     }
+
     .pricing-container {
         display: block
     }

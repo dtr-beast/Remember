@@ -16,10 +16,15 @@ import TwitterLogo from "../assets/logos/twitter.svg"
 import FacebookLogo from "../assets/logos/facebook.svg"
 import {useTextField} from "../hooks";
 import {Link} from "react-router-dom";
+import register from "../services/registerService";
 
-// interface SignInFormProps {
-//     submitUser: (user: User) => void
-// }
+interface SignInFormProps {
+    submitUser: (user: User) => void
+}
+
+interface User {
+    name: string
+}
 
 async function asyncRequest(promise: Promise<any>) {
     try {
@@ -38,7 +43,7 @@ export default function Register() {
     const [privacyBox, setPrivacyBox] = useState(false)
     const [updateBox, setUpdateBox] = useState(false)
 
-    async function getOnSubmit(event: FormEvent<HTMLFormElement>) {
+    async function registerUser(event: FormEvent<HTMLFormElement>) {
         event.preventDefault()
 
         username.reset()
@@ -50,24 +55,27 @@ export default function Register() {
             username.setHelperText("Enter a username")
             return;
         }
-        //
-        // const [user, error] = await asyncRequest(loginService.login({
-        //     username: username.value,
-        //     password: password.value
-        // }))
 
-        // if (error) {
-        //     if (error.message === 'invalidUsername') {
-        //         username.setError(true)
-        //         username.setHelperText("Couldn't find your account")
-        //     } else if (error.message === 'invalidPassword') {
-        //         console.log("Wrong Pass")
-        //         password.setError(true)
-        //         password.setHelperText("Wrong Password")
-        //     }
-        // } else {
-        //     submitUser(user)
-        // }
+        const [data, error] = await asyncRequest(register({
+            username: username.value,
+            password: password.value,
+            name: name.value
+        }))
+
+        if (error) {
+            if (error.message.startsWith("User:")) {
+                username.setError(true)
+                username.setHelperText(error.message.substring(5))
+            } else if (error.message.startsWith("Pass:")) {
+                password.setError(true)
+                password.setHelperText(error.message.substring(5))
+            }
+        }
+
+        // TODO: Show notification user successfully created
+        if (data) {
+
+        }
     }
 
     return <>
@@ -99,12 +107,14 @@ export default function Register() {
                 <Typography variant="h1" sx={{fontSize: "3em"}}>
                     Get started free today
                 </Typography>
-                <form onSubmit={getOnSubmit}>
+                <form onSubmit={registerUser}>
                     {/* TODO: Figure out how to control the width, giving Box to the first textfield is a workaround for now (prototyping only) */}
                     <Box><TextField {...name} fullWidth sx={{m: "1em"}}/></Box>
                     <TextField {...username} fullWidth sx={{m: "1em"}}/>
                     <TextField {...password} fullWidth sx={{m: "1em"}}/>
+                    {/* TODO: Add Retype password field for password confirmation */}
 
+                    {/* TODO: add e-mail field*/}
                     <FormGroup>
                         {/* TODO: Link the Privacy Policy and TOS */}
                         <FormControlLabel
