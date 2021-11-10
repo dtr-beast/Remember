@@ -2,9 +2,7 @@ import React from "react";
 import '../index.css';
 import './New.css';
 import {Link} from "react-router-dom";
-import {Button, Typography} from "@mui/material";
 import Cards from "./Cards";
-import Stub from "../assets/images/MinimalistStoryMindMapWhiteBG.webp"
 
 function PricingSection() {
     return <section className="container">
@@ -85,11 +83,11 @@ function PricingSection() {
 export default function New() {
     return (
         <>
-            {/*TODO: Fix the navbar to top */}
-            <header className="text-gray-600 body-font">
-                <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            {/*TODO: Navbar goes under the pricing section */}
+            <header className="text-gray-600 body-font bg-white w-full fixed">
+                <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center ">
                     <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-                        <span className="ml-3 text-3xl" style={{fontFamily: "Lemonada", color: "blue"}}>Remember</span>
+                        <span className="ml-3 text-3xl text-indigo-500 italic" >Remember</span>
                     </a>
                     <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
                         <a className="mr-5 hover:text-gray-900">Features</a>
@@ -103,7 +101,8 @@ export default function New() {
 
                     <Link to="/signup" style={{textDecoration: "none"}}>
                         <button
-                            className="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Sign Up!
+                            className="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Sign
+                            Up!
                         </button>
 
                     </Link>
@@ -121,7 +120,7 @@ export default function New() {
             {/*<Cards/>*/}
             <section className="text-gray-600 body-font">
                 <div className="mx-auto flex flex-col text-center w-full ">
-                    <h2 className="text-xxl-center text-2xl text-indigo-700 tracking-widest fs-1">Features</h2>
+                    <h2 className="text-xxl-center text-2xl text-indigo-700 tracking-widest fs-1">Benefits of Mind Mapping</h2>
                 </div>
                 <div className="container px-5 py-24 mx-auto">
                     <div
@@ -237,10 +236,10 @@ export default function New() {
             <section className="text-gray-600 body-font">
                 <div className="container px-5 py-24 mx-auto flex items-center md:flex-row flex-col">
                     <div className="flex flex-col md:pr-10 md:mb-0 mb-6 pr-0 w-full md:w-auto md:text-left text-center">
-                        <h2 className="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1">ROOF PARTY
-                            POLAROID</h2>
-                        <h1 className="md:text-3xl text-2xl font-medium title-font text-gray-900">Master Cleanse Reliac
-                            Heirloom</h1>
+                        <h2 className="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1">Download our
+                            App</h2>
+                        <h1 className="md:text-3xl text-2xl font-medium title-font text-gray-900">Now available on App
+                            Store</h1>
                     </div>
                     <div className="flex md:ml-auto md:mr-0 mx-auto items-center flex-shrink-0 space-x-4">
                         <button
