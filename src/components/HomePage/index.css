@@ -106,8 +106,16 @@ h3.title {
 
 .pricing-container {
     display: flex;
-    max-width: 1000px;
+    /*max-width: 1000px;*/
+    width: 100%;
     margin: 0 auto
+}
+@media (max-width: 640px) {
+    .pricing-container {
+        /*flex-wrap: wrap;*/
+        /*min-width: 370px;*/
+        display: block;
+    }
 }
 
 .pricing-tag {

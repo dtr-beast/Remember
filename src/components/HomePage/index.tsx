@@ -15,9 +15,7 @@ import { Navbar } from "./Navbar";
 export default function HomePage() {
   return (
     <>
-      {/*TODO: Navbar goes under the pricing section */}
       <Navbar />
-
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-20">
           <h1 className="text-xxl-center text-6xl text-indigo-500 tracking-widest title-font mb-1 fs-1">Online

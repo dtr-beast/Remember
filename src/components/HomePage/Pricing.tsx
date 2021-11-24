@@ -24,8 +24,9 @@ export default function Pricing() {
             </ul>
           </div>
           <a className="blanter-order-btn"
-             href="https://www.idblanter.com/2019/08/blanter-tokoshop-template-toko-online-terbaik.html" title="#"
-             target="_blank">Buy Now</a></div>
+             href="" title="#"
+             target="_blank">Buy Now</a>
+        </div>
         <div className="pricing-blanter-column"><img
           src="https://2.bp.blogspot.com/-KVVFsnJlM9E/XqqD0Qo0KDI/AAAAAAAAONg/FIn1BXo4PU8xX12gCac755x9vXDHOfVvQCLcBGAsYHQ/s50/personal.png"
           alt="Personal" />           <h3>Personal</h3>
@@ -43,8 +44,9 @@ export default function Pricing() {
             </ul>
           </div>
           <a className="blanter-order-btn"
-             href="https://www.idblanter.com/2019/08/blanter-tokoshop-template-toko-online-terbaik.html" title="#"
-             target="_blank">Buy Now</a></div>
+             href="" title="#"
+             target="_blank">Buy Now</a>
+        </div>
         <div className="pricing-blanter-column"><img
           src="https://2.bp.blogspot.com/-QoGlZN-t_fQ/XqqDzmE276I/AAAAAAAAONc/AG5ZXRxQo9Q24-LVUtdg_Jf3Za0kZqacACLcBGAsYHQ/s50/developer.png"
           alt="Developer" />           <h3>Enterprise</h3>
@@ -62,8 +64,9 @@ export default function Pricing() {
             </ul>
           </div>
           <a className="blanter-order-btn"
-             href="https://www.idblanter.com/2019/08/blanter-tokoshop-template-toko-online-terbaik.html" title="#"
-             target="_blank">Buy Now</a></div>
+             href="" title="#"
+             target="_blank">Buy Now</a>
+        </div>
       </div>
     </div>
   </section>;
