@@ -11,11 +11,11 @@ import {
     Checkbox
 } from "@mui/material";
 
-import GoogleLogo from "../../assets/logos/google.svg"
-import TwitterLogo from "../../assets/logos/twitter.svg"
-import FacebookLogo from "../../assets/logos/facebook.svg"
-import {useTextField} from "../../hooks";
-import register from "../../services/registerService";
+import GoogleLogo from "@/logos/google.svg"
+import TwitterLogo from "@/logos/twitter.svg"
+import FacebookLogo from "@/logos/facebook.svg"
+import {useTextField} from "../hooks";
+import register from "../services/registerService";
 import Navbar from "./Navbar";
 
 interface SignInFormProps {

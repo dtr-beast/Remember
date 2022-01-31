@@ -1,6 +1,7 @@
 import {Button, Typography, Toolbar, AppBar, Box} from "@mui/material";
-import {Link} from "react-router-dom"
 import React from "react";
+
+import Link from 'next/link'
 
 export default function HomeNavbar() {
 
@@ -11,8 +12,8 @@ export default function HomeNavbar() {
                             sx={{flexGrow: 1, color: "#00f", fontFamily: "Lemonada", fontSize: "30px"}}>
                     Remember
                 </Typography>
-                <Link to="/login" style={{textDecoration: "none"}}>
-                    <Button style={{textTransform: "none"}}>
+                <Link href="/login" passHref>
+                    <Button style={{textTransform: "none", textDecoration: "none"}}>
                         <Typography variant="h6" color="inherit" component="div"
                                     style={{fontVariant: "small-caps", fontWeight: "bold"}}>
                             Login
@@ -26,9 +27,14 @@ export default function HomeNavbar() {
                     marginLeft: 20,
                     marginRight: 40
                 }}>
-                    <Link to="/signup" style={{textDecoration: "none"}}>
+                    <Link href="/signup" passHref>
                         <Typography variant="h6" color="inherit" component="div"
-                                    style={{fontVariant: "small-caps", fontWeight: "bold", color: "white"}}>
+                                    style={{
+                                        textDecoration: "none",
+                                        fontVariant: "small-caps",
+                                        fontWeight: "bold",
+                                        color: "white"
+                                    }}>
                             Sign Up
                         </Typography>
                     </Link>

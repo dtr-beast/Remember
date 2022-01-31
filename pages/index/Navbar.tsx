@@ -1,5 +1,5 @@
-import {Link} from "react-router-dom";
 import React, {useState} from "react";
+import Link from 'next/link'
 
 export function Navbar() {
     const [hidden, setHidden] = useState('hidden')
@@ -19,8 +19,9 @@ export function Navbar() {
         "
         >
             <div>
-                    <Link to="/" className="flex title-font font-medium items-center text-gray-900">
-                        <span className="ml-3 text-3xl text-indigo-500 italic">Remember</span>
+                    <Link href="/">
+                        <a className="flex title-font font-medium items-center text-gray-900 ml-3 text-3xl text-indigo-500 italic">Remember</a>
+                        {/*<span className="ml-3 text-3xl text-indigo-500 italic">Remember</span>*/}
                     </Link>
             </div>
             <div className={`${hidden} w-full lg:flex md:items-center md:w-auto`} id="menu">
@@ -45,17 +46,18 @@ export function Navbar() {
                         <a className="md:p-4 py-2 block text-center hover:text-purple-400" href="#">Pricing</a>
                     </li>
                     <li>
-                        <Link to="/login" style={{textDecoration: "none"}}>
+                        <Link href="/Login">
                             <a
-                                // className="mr-5 hover:text-gray-900"
+                                style={{textDecoration: "none"}}
                                 className="md:p-4 py-2 block text-center hover:text-purple-400"
                             >Login</a>
                         </Link>
                     </li>
                     <li>
 
-                        <Link to="/signup" style={{textDecoration: "none"}}>
+                        <Link href="/Signup">
                             <a
+                                style={{textDecoration: "none"}}
                                 // className="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
                                 // className="md:p-4 py-2 block text-center hover:text-purple-400"
                                 className="px-8 mt-2 py-2 block text-center hover:bg-indigo-600 bg-indigo-500 text-white rounded-3xl"

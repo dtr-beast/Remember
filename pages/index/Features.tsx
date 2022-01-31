@@ -47,7 +47,7 @@ export default function Features() {
           <div className="flex-grow">
             <h2 className="text-white text-lg title-font font-medium mb-3">Stunning Presentations</h2>
             <p className="leading-relaxed text-base">Visualizing your ideas is the most powerful way to communicate them
-              to others. With MindMeister's built-in presentation mode you turn mind maps into beautiful, dynamic
+              to others. With MindMeister&aposs built-in presentation mode you turn mind maps into beautiful, dynamic
               slideshows within seconds.</p>
             <a className="mt-3 text-indigo-400 inline-flex items-center">Learn More
               <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"

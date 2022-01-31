@@ -20,7 +20,7 @@ export default function Benefits() {
           <p className="leading-relaxed text-base">Mind maps are graphical representations of
             information that convey the relationship between individual ideas and concepts. No
             matter how complex or broad a subject is, a mind map brings order to the chaos and helps
-            you see the 'bigger picture'.</p>
+            you see the &apos bigger picture &apos.</p>
           <a className="mt-3 text-indigo-500 inline-flex items-center">Learn More
             <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"
                  strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">

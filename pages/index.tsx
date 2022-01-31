@@ -1,14 +1,14 @@
 import React from "react";
 
-import Pricing from "./Pricing";
-import ContactUs from "./ContactUs";
-import Footer from "./Footer";
-import DownloadApp from "./DownloadApp";
-import Features from "./Features";
-import Benefits from "./Benefits";
+import Pricing from "./index/Pricing";
+import ContactUs from "./index/ContactUs";
+import Footer from "./index/Footer";
+import DownloadApp from "./index/DownloadApp";
+import Features from "./index/Features";
+import Benefits from "./index/Benefits";
 
-import "./index.css";
-import { Navbar } from "./Navbar";
+// import "./index/index.css";
+import { Navbar } from "./index/Navbar";
 
 
 
